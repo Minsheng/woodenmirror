@@ -78,7 +78,8 @@ void loop(void) {
   }
 }
 
-/* */
+/* take photoresistor readings and convert them to servo motor position values 
+decelerate if it is moving backwards */
 void square_motion(int pr, int prVal) {
   int servoPos = compute_distance(prVal);
   switch (pr) {
